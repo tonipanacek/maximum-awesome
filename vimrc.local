@@ -3,6 +3,8 @@ set nocursorline " don't highlight current line
 " keyboard shortcuts
 inoremap jj <ESC>
 
+highlight LineNr term=bold cterm=NONE ctermfg=DarkGrey
+
 " highlight search
 "set hlsearch
 "nmap <leader>hl :let @/ = ""<CR>

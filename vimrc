@@ -31,9 +31,9 @@ set encoding=utf-8
 set expandtab                                                " expand tabs to spaces
 set ignorecase                                               " case-insensitive search
 set incsearch                                                " search as you type
-set laststatus=2                                             " always show statusline
-set list                                                     " show trailing whitespace
-set listchars=tab:▸\ ,trail:▫
+" set laststatus=2                                             " always show statusline
+" set list                                                     " show trailing whitespace
+" set listchars=tab:▸\ ,trail:▫
 set number                                                   " show line numbers
 set ruler                                                    " show where you are
 set scrolloff=3                                              " show context above/below cursorline
@@ -108,7 +108,7 @@ if exists('$TMUX')
   let &t_EI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=0\x7\<Esc>\\"
 else
   let &t_SI = "\<Esc>]50;CursorShape=1\x7"
-  let &t_EI = "\<Esc>]50;CursorShape=0\x7"
+ let &t_EI = "\<Esc>]50;CursorShape=0\x7"
 endif
 
 " Don't copy the contents of an overwritten selection.
@@ -127,3 +127,8 @@ if filereadable(expand("~/.vimrc.local"))
   " noremap! jj <ESC>
   source ~/.vimrc.local
 endif
+
+let g:user_emmet_leader_key=';'
+imap <expr> <tab> emmet#expandAbbrIntelligent("\<tab>")
+
+:highlight LineNr term=bold cterm=NONE ctermfg=DarkGrey
