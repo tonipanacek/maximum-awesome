@@ -1,6 +1,3 @@
-" Plugins here are part of the CORE Maximum Awesome setup
-" Do NOT add bundles to this list, as they might get removed when you upgrade
-" Maximum Awesome.
 " Please create ~/.vimrc.bundles.local and add any extra bundles you want there
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'airblade/vim-gitgutter'
@@ -45,3 +42,4 @@ Plugin 'itchyny/lightline.vim'
 Plugin 'ayu-theme/ayu-vim'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'kana/vim-fakeclip'
+Plugin 'Raimondi/delimitMate'
