@@ -132,12 +132,3 @@ let g:user_emmet_leader_key=';'
 imap <expr> <tab> emmet#expandAbbrIntelligent("\<tab>")
 
 :highlight LineNr term=bold cterm=NONE ctermfg=DarkGrey
-
-" Auto close characters
-inoremap " ""<left>
-inoremap ' ''<left>
-inoremap ( ()<left>
-inoremap [ []<left>
-inoremap { {}<left>
-inoremap {<CR> {<CR>}<ESC>O
-inoremap {;<CR> {<CR>};<ESC>O
