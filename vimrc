@@ -131,4 +131,12 @@ endif
 let g:user_emmet_leader_key=';'
 imap <expr> <tab> emmet#expandAbbrIntelligent("\<tab>")
 
-:highlight LineNr term=bold cterm=NONE ctermfg=DarkGrey
+set term=xterm-256color
+:highlight LineNr term=bold cterm=NONE ctermfg=Brown
+
+nmap <S-Enter> O<Esc>
+nmap <CR> o<Esc>
+
+" let delimitMate_expand_cr = 1
+" let delimitMate_expand_space = 1
+" imap <expr> <CR> <Plug>delimitMateCR
