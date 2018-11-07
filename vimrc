@@ -1,12 +1,14 @@
 " don't bother with vi compatibility
 set nocompatible
 
+filetype plugin on
+
 " enable syntax highlighting
 syntax enable
 
 " configure Vundle
 filetype on " without this vim emits a zero exit status, later, because of :ft off
-filetype off
+:filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
@@ -129,7 +131,6 @@ if filereadable(expand("~/.vimrc.local"))
 endif
 
 let g:user_emmet_leader_key=';'
-imap <expr> <tab> emmet#expandAbbrIntelligent("\<tab>")
 
 set term=xterm-256color
 :highlight LineNr term=bold cterm=NONE ctermfg=Brown
@@ -140,3 +141,4 @@ nmap <CR> o<Esc>
 " let delimitMate_expand_cr = 1
 " let delimitMate_expand_space = 1
 " imap <expr> <CR> <Plug>delimitMateCR
+
