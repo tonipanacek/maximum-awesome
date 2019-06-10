@@ -71,6 +71,7 @@ nnoremap <leader>] :TagbarToggle<CR>
 nnoremap <leader><space> :call whitespace#strip_trailing()<CR>
 nnoremap <leader>g :GitGutterToggle<CR>
 noremap <silent> <leader>V :source ~/.vimrc<CR>:filetype detect<CR>:exe ":echo 'vimrc reloaded'"<CR>
+noremap <leader>j <esc>
 
 " in case you forgot to sudo
 cnoremap w!! %!sudo tee > /dev/null %
@@ -161,6 +162,10 @@ let g:user_emmet_settings = {
   \}
 
 " Vim Tabs
-" map  <C-r> :tabn<CR>
-map  <C-y> :tabp<CR>
+map  <C-Y> :tabp<CR>
+map  <C-y> :tabn<CR>
 map  <C-t> :tabnew<CR>
+
+" Touch bar escape replacement
+inoremap jj <esc>
+inoremap ,j <esc>
